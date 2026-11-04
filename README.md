@@ -45,3 +45,7 @@ js/app.js              # shell, hash router, global search, notifications, theme
 ```
 
 Use **Reset demo data** (sidebar) to restore the original sample data.
+
+## Also in this repo
+
+- [`call-auditor/`](call-auditor/README.md): CallLens, a static sales-call quality and compliance auditing site and workspace.
