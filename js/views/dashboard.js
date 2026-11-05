@@ -27,7 +27,7 @@
         <div class="row"><label class="sel"><span class="sr">Date range</span><select data-bind="dashRange:change">${[7, 30, 90].map((r) => `<option value="${r}" ${r === R ? 'selected' : ''}>Last ${r} days</option>`).join('')}</select></label>
         <button class="btn primary" data-action="newCampaign">${I('plus', 16)} New campaign</button></div></div>
       <div class="grid kpis">
-        ${kpi('campaign', 'Campaigns running', active, `<span class="muted sm">${s.campaigns.length} total</span>`, '', '#6d4fd8')}
+        ${kpi('campaign', 'Campaigns running', active, `<span class="muted sm">${s.campaigns.length} total</span>`, '', '#5b5bd6')}
         ${kpi('dollar', 'Marketing spend', U.moneyK(cur.spend), delta(cur.spend, prev.spend, true), sp('spend'), '#f59e0b')}
         ${kpi('trend', 'Revenue generated', U.moneyK(cur.revenue), delta(cur.revenue, prev.revenue), sp('revenue'), '#10b981')}
         ${kpi('users', 'Leads captured', U.num(cur.leads), delta(cur.leads, prev.leads), sp('leads'), '#3b82f6')}
