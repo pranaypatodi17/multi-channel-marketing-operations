@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CallLens · Review every sales call, not 2%</title>
+  <meta name="description" content="CallLens transcribes every sales call in Hindi, English and Hinglish, scores it against your rubric with quoted evidence, flags compliance risks and alerts managers instantly.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f766e'/%3E%3Cpath d='M5 16h4l3-8 5 16 4-12 2 4h4' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script>try{var t=(JSON.parse(localStorage.getItem('calllens.v1')||'{}').settings||{}).theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body class="site">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="CallLens home"><span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-6 4 12 3-9 2 3h4"/></svg></span>CallLens</a>
+    <nav class="links" id="links" aria-label="Primary">
+      <a href="#how">How it works</a><a href="#evidence">Evidence</a><a href="#rubric">Rubrics</a><a href="#roi">ROI</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-r">
+      <button class="icon-btn" id="themeT" aria-label="Toggle theme"></button>
+      <a class="btn ghost hide-s" href="#demo">Book a demo</a>
+      <a class="btn primary" href="app.html">Open live demo</a>
+      <button class="icon-btn menu" id="menuT" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot live"></span> Hindi · English · Hinglish</span>
+      <h1>Review <em>every</em> sales call.<br>Not the 2% you have time for.</h1>
+      <p class="lead">CallLens transcribes each call, scores it against your own rubric with a quoted line as proof, flags compliance risks with the exact timestamp, and alerts your manager on Slack before the customer complains.</p>
+      <div class="cta">
+        <a class="btn primary lg" href="app.html">Open the live demo <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a class="btn lg" href="#demo">Book a 20-minute walkthrough</a>
+      </div>
+      <ul class="ticks">
+        <li>Every score is backed by a transcript quote</li>
+        <li>Rules catch missed disclosures deterministically</li>
+        <li>Managers can override anything, with an audit trail</li>
+      </ul>
+    </div>
+    <div class="mock" id="mock" aria-label="Animated preview of a flagged call">
+      <div class="mock-top"><span class="mdots"><i></i><i></i><i></i></span><em>CL-24640 · Vikram S. Rathore · SecureGrowth ULIP</em><span class="chip sev-high">High risk</span></div>
+      <div class="mock-body">
+        <div class="mock-score"><div class="mr"><svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="34" fill="none" stroke="var(--line)" stroke-width="8"/><circle id="mArc" cx="40" cy="40" r="34" fill="none" stroke="var(--bad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" transform="rotate(-90 40 40)"/></svg><b id="mNum">0</b></div><small>Quality score</small></div>
+        <div class="mock-main">
+          <div class="mwave" id="mWave"></div>
+          <div class="mtx" id="mTx"></div>
+        </div>
+      </div>
+      <div class="mock-flags" id="mFlags"></div>
+      <div class="mock-slack" id="mSlack"><span class="sl-ic">#</span><div><b>#qa-escalations</b> · now<br>🚨 <b>High-severity call flagged.</b> “guaranteed 20 percent returns” at 00:10. <u>Open call</u></div></div>
+    </div>
+  </div>
+  <div class="wrap sectors"><span>Built for teams that sell under rules</span><ul><li>Insurance</li><li>Loans &amp; lending</li><li>Real estate</li><li>Education counselling</li><li>Call centres &amp; BPOs</li><li>D2C &amp; SaaS telecalling</li></ul></div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">The problem</span><h2>Managers hear a sliver of the calls, and find out late</h2></div>
+    <div class="cols3">
+      <article class="tile"><div class="big">~2%</div><h3>of calls get reviewed</h3><p>A manager can listen to a handful of recordings a week. Everything else is invisible.</p></article>
+      <article class="tile"><div class="big">After</div><h3>the complaint, not before</h3><p>Mis-selling, missed disclosures and rude behaviour usually surface when a customer escalates.</p></article>
+      <article class="tile"><div class="big">Gut</div><h3>feel coaching</h3><p>Without data across all calls, feedback depends on which three calls a manager happened to hear.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">How it works</span><h2>From recording to alert in about a minute</h2><p>An LLM judges nuance such as tone and objection handling. A deterministic rules layer checks what must be said and what must never be said. Together they are consistent and easy to defend.</p></div>
+    <div class="steps" id="steps" role="tablist" aria-label="Pipeline stages"></div>
+    <div class="step-panel card" id="stepPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- EVIDENCE DEMO -->
+<section class="sec alt" id="evidence">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Evidence, not opinions</span><h2>Click a score. Hear the exact moment.</h2><p>Every criterion quotes the supporting line and timestamp. A score without evidence is rejected, so managers never have to take the AI’s word for it. Try it below.</p></div>
+    <div class="ev-demo card">
+      <div class="ev-l" id="evList" role="tablist" aria-label="Scored criteria"></div>
+      <div class="ev-r">
+        <div class="ev-player"><button class="play" id="evPlay" aria-label="Play from this moment"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21"/></svg></button><div class="ev-track"><i id="evFill"></i></div><span class="mono" id="evTime">00:00 / 02:02</span></div>
+        <div class="ev-tx" id="evTx"></div>
+        <div class="ev-note" id="evNote"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Everything a QA team needs</span><h2>One workspace, from ingestion to coaching</h2></div>
+    <div class="feat">
+      <article><span class="fi">🎙️</span><h3>Ingest from anywhere</h3><p>Recording folder, Exotel, Knowlarity, Ozonetel, Twilio or a manual upload. Calls are processed as they end.</p></article>
+      <article><span class="fi">🗣️</span><h3>Hindi, English and Hinglish</h3><p>Speaker-separated transcripts with cleaned-up numbers and names, plus a confidence indicator and reviewer corrections.</p></article>
+      <article><span class="fi">✅</span><h3>Configurable scoring</h3><p>Pass/fail or 1–5 per criterion, weighted by your priorities. Compare the impact before publishing any change.</p></article>
+      <article><span class="fi">🚨</span><h3>Instant escalations</h3><p>Serious violations go to Slack or email with the flagged quote and a link that opens the audio at that second.</p></article>
+      <article><span class="fi">📈</span><h3>Coaching, not just a report card</h3><p>Per-call feedback with suggested phrasing, agent trends, strongest and weakest categories, and team leaderboards.</p></article>
+      <article><span class="fi">🧾</span><h3>Audit-ready exports</h3><p>Every override, review and rubric change is logged. Export CSV or a weekly PDF for compliance.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT TOUR -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Product tour</span><h2>See what your managers will see</h2></div>
+    <div class="tour">
+      <figure class="shot big"><img src="img/dashboard.png" width="1440" height="900" loading="lazy" alt="CallLens team overview showing score trend, review coverage and top violations"><figcaption>Team overview: score trend, category breakdown and this week’s top violations.</figcaption></figure>
+      <figure class="shot"><img src="img/call-detail.png" width="1440" height="900" loading="lazy" alt="CallLens call detail page with synced audio waveform, transcript and rubric evidence"><figcaption>Call detail: audio synced to the transcript, flagged lines highlighted, evidence beside every score.</figcaption></figure>
+      <figure class="shot"><img src="img/rubric.png" width="1440" height="900" loading="lazy" alt="CallLens rubric editor with weights and impact preview"><figcaption>Rubric editor: change criteria without code and preview the impact before publishing.</figcaption></figure>
+    </div>
+    <p class="center"><a class="btn primary lg" href="app.html">Explore the full workspace</a></p>
+  </div>
+</section>
+
+<!-- RUBRICS -->
+<section class="sec" id="rubric">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Client-editable rubrics</span><h2>Your playbook, not ours</h2><p>Start from a template for your industry and edit every criterion, weight and phrase list from the admin screen. No engineers involved.</p></div>
+    <div class="tabs-row" role="tablist" id="indTabs"></div>
+    <div class="card ind" id="indBody"></div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="sec alt" id="roi">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">The business case</span><h2>Your managers review about 2% of calls today. This covers 100%.</h2><p>Adjust the numbers to match your floor. The estimate shows how much human review time it would take to reach full coverage manually.</p></div>
+    <div class="roi card">
+      <div class="roi-in">
+        <label>Agents <output id="oAg"></output><input type="range" id="rAg" min="5" max="500" value="60"></label>
+        <label>Calls per agent per day <output id="oCp"></output><input type="range" id="rCp" min="10" max="120" value="40"></label>
+        <label>Average call length (min) <output id="oLn"></output><input type="range" id="rLn" min="2" max="15" value="5"></label>
+        <label>Share of calls reviewed today <output id="oRv"></output><input type="range" id="rRv" min="1" max="20" value="2"></label>
+        <label>QA analyst cost per month (₹) <output id="oCs"></output><input type="range" id="rCs" min="20000" max="120000" step="5000" value="45000"></label>
+      </div>
+      <div class="roi-out" id="roiOut"></div>
+    </div>
+    <p class="fine">Assumptions: 22 working days a month; a manual review takes the call length plus 4 minutes of scoring and notes; a QA analyst has about 140 productive hours a month; with CallLens, humans review roughly 12% of calls, the ones that are flagged. Indicative CallLens cost uses the Growth price below.</p>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section class="sec" id="security">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Consent, privacy and control</span><h2>Built for regulated conversations</h2></div>
+    <div class="cols4">
+      <article class="tile"><h3>Consent built in</h3><p>Checks that agents give the recording notice, and flags calls where sensitive data is collected or opt-outs are ignored.</p></article>
+      <article class="tile"><h3>Encrypted, in-region</h3><p>Audio and transcripts are encrypted at rest and in transit and stored in an Indian region.</p></article>
+      <article class="tile"><h3>Retention you set</h3><p>Separate retention periods for audio and transcripts, PAN and phone masking, and customer-level erasure.</p></article>
+      <article class="tile"><h3>A human decides</h3><p>Scores are a first-pass review. Serious flags need manager confirmation, and every override is logged.</p></article>
+    </div>
+    <p class="fine center">Your legal team should confirm consent wording and retention against the data-protection and sector rules that apply to you.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec alt" id="pricing">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Pricing</span><h2>Priced per agent, so it scales with your floor</h2><p>Indicative pricing for pilots. Final pricing depends on call volume, integrations and rubric setup.</p></div>
+    <div class="price">
+      <article class="card pl"><h3>Starter</h3><div class="amt">₹1,200<small> / agent / month</small></div><p class="muted">For teams up to 25 agents getting started with QA automation.</p><ul><li>Upload and folder sync</li><li>Standard rubric templates</li><li>Scores, summaries, coaching</li><li>Email alerts</li></ul><a class="btn" href="#demo">Start a pilot</a></article>
+      <article class="card pl hot"><span class="pop">Most teams</span><h3>Growth</h3><div class="amt">₹1,900<small> / agent / month</small></div><p class="muted">For sales floors that need live alerts and a custom rubric.</p><ul><li>Everything in Starter</li><li>Dialer integrations (Exotel, Knowlarity, Ozonetel, Twilio)</li><li>Rubric editor with rule phrases</li><li>Slack and email escalations</li><li>Weekly reports</li></ul><a class="btn primary" href="#demo">Book a demo</a></article>
+      <article class="card pl"><h3>Compliance</h3><div class="amt">Custom</div><p class="muted">For regulated teams that need audit-grade reporting.</p><ul><li>Everything in Growth</li><li>Audit exports and retention controls</li><li>Dedicated rubric setup</li><li>SSO and role-based access</li></ul><a class="btn" href="#demo">Talk to us</a></article>
+    </div>
+    <p class="fine center">Optional one-time setup fee for custom rubrics and integrations. Per-call-minute billing is available for variable volumes.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap narrow">
+    <div class="head"><span class="eyebrow">Questions</span><h2>What teams ask before a pilot</h2></div>
+    <div class="faq">
+      <details><summary>How accurate is transcription on Hinglish and noisy calls?</summary><p>Accuracy varies by provider and audio quality, so we benchmark engines on your own recordings during the pilot. Every transcript shows a confidence indicator, low-confidence words are underlined, and reviewers can correct a line, which instantly re-runs the rules layer.</p></details>
+      <details><summary>Can the AI judge a call unfairly?</summary><p>Each score must quote a transcript line, otherwise it is rejected. Managers can override any score with a reason, and the original result stays in the audit trail. We position CallLens as a first-pass reviewer; disciplinary decisions stay with people.</p></details>
+      <details><summary>Why combine an LLM with rules?</summary><p>An LLM is good at nuance such as tone. Rules are better at facts, such as whether the disclosure sentence was said at all, or how long each person spoke. Using both makes results consistent and credible.</p></details>
+      <details><summary>Can we change the rubric ourselves?</summary><p>Yes. Client admins add and edit criteria, weights, severities and phrase lists in the rubric editor. You see the impact on the last 30 days before publishing.</p></details>
+      <details><summary>Which systems does it connect to?</summary><p>Exotel, Knowlarity, Ozonetel and Twilio, S3-compatible or SFTP recording folders, and manual upload. Alerts go to Slack and email.</p></details>
+      <details><summary>Is this page a real product?</summary><p>This site and the workspace behind “Open live demo” run entirely in your browser with bundled sample calls and scripted transcripts, so you can explore without sending any audio anywhere.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO FORM -->
+<section class="sec cta-band" id="demo">
+  <div class="wrap demo">
+    <div><span class="eyebrow light">See it on your calls</span><h2>Bring five recordings. We’ll score them live.</h2><p>In a 20-minute walkthrough we run a few of your own calls through the pipeline, show the evidence behind each score, and agree what a pilot would measure.</p>
+      <ul class="ticks light"><li>No integration needed for the walkthrough</li><li>Rubric drafted from your current QA scorecard</li><li>Pilot scoped in a week</li></ul></div>
+    <form class="card form" id="demoForm" novalidate>
+      <div class="f2"><div class="field"><label class="f" for="fn">Full name</label><input id="fn" name="name" type="text" autocomplete="name" required></div><div class="field"><label class="f" for="fe">Work email</label><input id="fe" name="email" type="email" autocomplete="email" required></div></div>
+      <div class="f2"><div class="field"><label class="f" for="fc">Company</label><input id="fc" name="company" type="text" autocomplete="organization" required></div><div class="field"><label class="f" for="fs">Team size</label><select id="fs"><option>Under 25 agents</option><option>25–100 agents</option><option>100–500 agents</option><option>500+ agents</option></select></div></div>
+      <div class="field"><label class="f" for="fv">What do your agents sell?</label><select id="fv"><option>Insurance</option><option>Loans and lending</option><option>Real estate</option><option>Education counselling</option><option>Call centre / BPO</option><option>D2C or SaaS</option><option>Something else</option></select></div>
+      <div class="field"><label class="f" for="fm">Anything we should prepare? <span class="muted">(optional)</span></label><textarea id="fm" rows="3"></textarea></div>
+      <button class="btn primary lg" type="submit" style="width:100%">Request a walkthrough</button>
+      <p class="fine" style="margin-top:10px">Demo form: nothing is sent anywhere. Your details stay in this browser.</p>
+      <div class="ok" id="formOk" hidden><div class="okc">✓</div><h3>Thanks, <span id="okName"></span>.</h3><p>We’ve noted your request. In a real deployment you’d now get a calendar link at <b id="okMail"></b>. Meanwhile, you can explore the workspace.</p><a class="btn primary" href="app.html">Open the live demo</a></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in"><a class="logo" href="#top"><span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-6 4 12 3-9 2 3h4"/></svg></span>CallLens</a><p class="muted">Sales call quality and compliance auditing. Demo workspace with sample data. “Anvaya Financial” is a fictional company.</p><nav><a href="app.html">Live demo</a><a href="#pricing">Pricing</a><a href="#security">Security</a><a href="#faq">FAQ</a></nav></div>
+</footer>
+<script src="js/landing.js"></script>
+</body>
+</html>
