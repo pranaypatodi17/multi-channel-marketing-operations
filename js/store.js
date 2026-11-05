@@ -160,7 +160,7 @@
       ['lead', 'New hot lead captured from LinkedIn', 'C9', 12], ['workflow', 'Workflow "Lead Nurture" processed 14 leads', 'W1', 26], ['campaign', 'Customer Loyalty Rewards reached 60% of budget', 'C5', 40],
     ].forEach((a, i) => activity.push({ id: U.uid('A'), type: a[0], text: a[1], ref: a[2], at: now - a[3] * 36e5 * (i + 1) }));
     activity.sort((a, b) => b.at - a.at);
-    return { v: 1, settings: { theme: 'light' }, campaigns, content, leads, workflows, activity, seq: 0 };
+    return { v: 1, settings: { theme: 'light', themeV: 2 }, campaigns, content, leads, workflows, activity, seq: 0 };
   }
 
   const CH_REACH = { Instagram: 22000, Facebook: 14000, LinkedIn: 9000, Email: 6000, 'Google Ads': 30000, Website: 8000 };
@@ -372,7 +372,7 @@
     S.workflows.push(w); log('workflow', `Workflow "${name}" created`, w.id); MF.commit(); return w;
   };
   api.deleteWorkflow = function (id) { S.workflows = S.workflows.filter((w) => w.id !== id); MF.commit(); };
-  api.setTheme = function (t) { S.settings.theme = t; MF.save(); };
+  api.setTheme = function (t) { S.settings.theme = t; S.settings.themeV = 2; MF.save(); };
   api.setThresh = function (hot, warm) { MF.THRESH = { hot, warm }; S.settings.thresh = { hot, warm }; MF.commit(); };
   api.simulate = function () {
     const n = 1 + Math.floor(Math.random() * 3), out = [];
@@ -384,6 +384,7 @@
   MF.init = function () {
     try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && p.v === 1 && p.campaigns) S = p; } } catch (e) { S = null; }
     if (!S) { S = seed(); MF.save(); }
+    if (S.settings.themeV !== 2) { S.settings.theme = 'light'; S.settings.themeV = 2; MF.save(); }
     if (S.settings.thresh) MF.THRESH = S.settings.thresh;
     api.tick();
   };
