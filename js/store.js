@@ -160,7 +160,7 @@
       ['lead', 'New hot lead captured from LinkedIn', 'C9', 12], ['workflow', 'Workflow "Lead Nurture" processed 14 leads', 'W1', 26], ['campaign', 'Customer Loyalty Rewards reached 60% of budget', 'C5', 40],
     ].forEach((a, i) => activity.push({ id: U.uid('A'), type: a[0], text: a[1], ref: a[2], at: now - a[3] * 36e5 * (i + 1) }));
     activity.sort((a, b) => b.at - a.at);
-    return { v: 1, settings: { theme: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' }, campaigns, content, leads, workflows, activity, seq: 0 };
+    return { v: 1, settings: { theme: 'light' }, campaigns, content, leads, workflows, activity, seq: 0 };
   }
 
   const CH_REACH = { Instagram: 22000, Facebook: 14000, LinkedIn: 9000, Email: 6000, 'Google Ads': 30000, Website: 8000 };
